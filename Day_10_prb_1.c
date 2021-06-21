@@ -1,13 +1,14 @@
 #include <stdio.h>
+#include <string.h>
 #include <ctype.h>
 
 int main(void) {
   int n = 0, len = 0;
   scanf("%d", &n);
   getchar();
-  char str[n];
+  char str[100];
   scanf("%[^\n]%*c", str);
-  for(int i = 0; i < n; i++){
+  for(int i = 0; i < n || i<strlen(str); i++){
 	  if(isalpha(str[i])){
 		  printf("%c", str[i]);
 		  len += 1;
